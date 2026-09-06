@@ -1,184 +1,216 @@
-\documentclass[UTF8,12pt]{ctexart}
-\usepackage[paperwidth=240mm,paperheight=200mm,margin=14mm,top=8mm]{geometry}
-\usepackage{amsmath,amssymb,mathtools}
-\usepackage{xcolor}
+\documentclass[UTF8,12pt,fontset=windows]{ctexart}
+\usepackage[paperwidth=240mm,paperheight=200mm,left=14mm,right=14mm,top=9mm,bottom=12mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm,graphicx,xcolor}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-\newcommand{\qn}[1]{\textbf{\large #1}\ }
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
 \xeCJKDeclareCharClass{CJK}{"2460 -> "24FF}
+\xeCJKDeclareCharClass{CJK}{"2160 -> "2188}
 \begin{document}
-\qn{2022.1}
+{\large\bfseries 2022.1}
+
 当 $x \to 0$ 时，$\alpha(x)$，$\beta(x)$ 是非零无穷小量，给出以下四个命题：
+
 ① 若 $\alpha(x) \sim \beta(x)$，则 $\alpha^2(x) \sim \beta^2(x)$；
+
 ② 若 $\alpha^2(x) \sim \beta^2(x)$，则 $\alpha(x) \sim \beta(x)$；
+
 ③ 若 $\alpha(x) \sim \beta(x)$，则 $\alpha(x) - \beta(x) = o(\alpha(x))$；
+
 ④ 若 $\alpha(x) - \beta(x) = o(\alpha(x))$，则 $\alpha(x) \sim \beta(x)$。
-其中所有的序号是（　　）
-\\
-\noindent (A) ①②　　(B) ①④　　(C) ①③④　　(D) ②③④
+
+其中真命题的全部序号是（　　）
+
+(A) ①②　　(B) ①④　　(C) ①③④　　(D) ②③④
 
 \vfill
 \newpage
-\qn{2022.2}
+{\large\bfseries 2022.2}
+
 $\int_{0}^{2}\mathrm{d}y\int_{y}^{2}\frac{y}{\sqrt{1+x^3}}\,\mathrm{d}x =$（　　）
-\\
-\noindent (A) $\dfrac{\sqrt{2}}{6}$　　(B) $\dfrac{1}{3}$　　(C) $\dfrac{\sqrt{2}}{3}$　　(D) $\dfrac{2}{3}$
+
+(A) $\dfrac{\sqrt{2}}{6}$　　(B) $\dfrac{1}{3}$　　(C) $\dfrac{\sqrt{2}}{3}$　　(D) $\dfrac{2}{3}$
 
 \vfill
 \newpage
-\qn{2022.3}
+{\large\bfseries 2022.3}
+
 设函数 $f(x)$ 在 $x = x_0$ 处有 2 阶导数，则（　　）
-\\
-\noindent (A) 当 $f(x)$ 在 $x_0$ 的某邻域内单调增加时，$f''(x_0) > 0$
-\\
-\noindent (B) 当 $f''(x_0) > 0$ 时，$f(x)$ 在 $x_0$ 的某邻域内单调增加
-\\
-\noindent (C) 当 $f(x)$ 在 $x_0$ 的某邻域内是凹函数时，$f''(x_0) > 0$
-\\
-\noindent (D) 当 $f''(x_0) > 0$ 时，$f(x)$ 在 $x_0$ 的某邻域内是凹函数
+
+(A) 当 $f(x)$ 在 $x_0$ 的某邻域内单调增加时，$f'(x_0) > 0$
+
+(B) 当 $f'(x_0) > 0$ 时，$f(x)$ 在 $x_0$ 的某邻域内单调增加
+
+(C) 当 $f(x)$ 在 $x_0$ 的某邻域内是凹函数时，$f''(x_0) > 0$
+
+(D) 当 $f''(x_0) > 0$ 时，$f(x)$ 在 $x_0$ 的某邻域内是凹函数
 
 \vfill
 \newpage
-\qn{2022.4}
+{\large\bfseries 2022.4}
+
 设函数 $f(t)$ 连续，令 $F(x,y) = \int_{0}^{x-y}(x-y-t)f(t)\,\mathrm{d}t$，则（　　）
-\\
-\noindent (A) $\dfrac{\partial F}{\partial x} = \dfrac{\partial F}{\partial y}$，$\dfrac{\partial^2 F}{\partial x^2} = \dfrac{\partial^2 F}{\partial y^2}$
-\\
-\noindent (B) $\dfrac{\partial F}{\partial x} = \dfrac{\partial F}{\partial y}$，$\dfrac{\partial^2 F}{\partial x^2} = -\dfrac{\partial^2 F}{\partial y^2}$
-\\
-\noindent (C) $\dfrac{\partial F}{\partial x} = -\dfrac{\partial F}{\partial y}$，$\dfrac{\partial^2 F}{\partial x^2} = \dfrac{\partial^2 F}{\partial y^2}$
-\\
-\noindent (D) $\dfrac{\partial F}{\partial x} = -\dfrac{\partial F}{\partial y}$，$\dfrac{\partial^2 F}{\partial x^2} = -\dfrac{\partial^2 F}{\partial y^2}$
+
+(A) $\dfrac{\partial F}{\partial x} = \dfrac{\partial F}{\partial y}$，$\dfrac{\partial^2 F}{\partial x^2} = \dfrac{\partial^2 F}{\partial y^2}$
+
+(B) $\dfrac{\partial F}{\partial x} = \dfrac{\partial F}{\partial y}$，$\dfrac{\partial^2 F}{\partial x^2} = -\dfrac{\partial^2 F}{\partial y^2}$
+
+(C) $\dfrac{\partial F}{\partial x} = -\dfrac{\partial F}{\partial y}$，$\dfrac{\partial^2 F}{\partial x^2} = \dfrac{\partial^2 F}{\partial y^2}$
+
+(D) $\dfrac{\partial F}{\partial x} = -\dfrac{\partial F}{\partial y}$，$\dfrac{\partial^2 F}{\partial x^2} = -\dfrac{\partial^2 F}{\partial y^2}$
 
 \vfill
 \newpage
-\qn{2022.5}
+{\large\bfseries 2022.5}
+
 设 $p$ 为常数，若反常积分 $\int_{0}^{1}\frac{\ln x}{x^p(1-x)^{1-p}}\,\mathrm{d}x$ 收敛，则 $p$ 的取值范围是（　　）
-\\
-\noindent (A) $(-1, 1)$　　(B) $(-1, 2)$　　(C) $(-\infty, 1)$　　(D) $(-\infty, 2)$
+
+(A) $(-1, 1)$　　(B) $(-1, 2)$　　(C) $(-\infty, 1)$　　(D) $(-\infty, 2)$
 
 \vfill
 \newpage
-\qn{2022.6}
-已知数列 $\{x_n\}$，其中 $-\dfrac{\pi}{2} \leqslant x \leqslant \dfrac{\pi}{2}$，则（　　）
-\\
-\noindent (A) 当 $\lim_{n\to\infty}\cos(\sin x_n)$ 存在时，当 $\lim_{n\to\infty} x_n$ 存在
-\\
-\noindent (B) 当 $\lim_{n\to\infty}\sin(\cos x_n)$ 存在时，当 $\lim_{n\to\infty} x_n$ 存在
-\\
-\noindent (C) 当 $\lim_{n\to\infty}\cos(\sin x_n)$ 存在时，$\lim_{n\to\infty}\sin x_n$ 存在，但 $\lim_{n\to\infty} x_n$ 不一定存在
-\\
-\noindent (D) 当 $\lim_{n\to\infty}\sin(\cos x_n)$ 存在时，$\lim_{n\to\infty}\cos x_n$ 存在，但 $\lim_{n\to\infty} x_n$ 不一定存在
+{\large\bfseries 2022.6}
+
+已知数列 $\{x_n\}$，其中 $-\dfrac{\pi}{2} \leqslant x_n \leqslant \dfrac{\pi}{2}$，则（　　）
+
+(A) 当 $\lim_{n\to\infty}\cos(\sin x_n)$ 存在时，$\lim_{n\to\infty} x_n$ 存在
+
+(B) 当 $\lim_{n\to\infty}\sin(\cos x_n)$ 存在时，$\lim_{n\to\infty} x_n$ 存在
+
+(C) 当 $\lim_{n\to\infty}\cos(\sin x_n)$ 存在时，$\lim_{n\to\infty}\sin x_n$ 存在，但 $\lim_{n\to\infty} x_n$ 不一定存在
+
+(D) 当 $\lim_{n\to\infty}\sin(\cos x_n)$ 存在时，$\lim_{n\to\infty}\cos x_n$ 存在，但 $\lim_{n\to\infty} x_n$ 不一定存在
 
 \vfill
 \newpage
-\qn{2022.7}
+{\large\bfseries 2022.7}
+
 已知 $I_1 = \int_{0}^{1}\frac{x}{2(1+\cos x)}\,\mathrm{d}x,\quad I_2 = \int_{0}^{1}\frac{\ln(1+x)}{1+\cos x}\,\mathrm{d}x,\quad I_3 = \int_{0}^{1}\frac{2x}{1+\sin x}\,\mathrm{d}x$，则（　　）
-\\
-\noindent (A) $I_1 < I_2 < I_3$　　(B) $I_2 < I_1 < I_3$　　(C) $I_1 < I_3 < I_2$　　(D) $I_3 < I_2 < I_1$
+
+(A) $I_1 < I_2 < I_3$　　(B) $I_2 < I_1 < I_3$　　(C) $I_1 < I_3 < I_2$　　(D) $I_3 < I_2 < I_1$
 
 \vfill
 \newpage
-\qn{2022.8}
+{\large\bfseries 2022.8}
+
 设 $\boldsymbol{A}$ 为 3 阶矩阵，$\boldsymbol{\Lambda} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 0 \end{pmatrix}$，则 $\boldsymbol{A}$ 的特征值为 $1, -1, 0$ 的充分必要条件是（　　）
-\\
-\noindent (A) 存在可逆矩阵 $\boldsymbol{P}, \boldsymbol{Q}$，使得 $\boldsymbol{A} = \boldsymbol{P}\boldsymbol{\Lambda}\boldsymbol{Q}$
-\\
-\noindent (B) 存在可逆矩阵 $\boldsymbol{P}$，使得 $\boldsymbol{A} = \boldsymbol{P}\boldsymbol{\Lambda}\boldsymbol{P}^{-1}$
-\\
-\noindent (C) 存在正交矩阵 $\boldsymbol{Q}$，使得 $\boldsymbol{A} = \boldsymbol{Q}\boldsymbol{\Lambda}\boldsymbol{Q}^{-1}$
-\\
-\noindent (D) 存在可逆矩阵 $\boldsymbol{P}$，使得 $\boldsymbol{A} = \boldsymbol{P}\boldsymbol{\Lambda}\boldsymbol{P}^{\mathrm{T}}$
+
+(A) 存在可逆矩阵 $\boldsymbol{P}, \boldsymbol{Q}$，使得 $\boldsymbol{A} = \boldsymbol{P}\boldsymbol{\Lambda}\boldsymbol{Q}$
+
+(B) 存在可逆矩阵 $\boldsymbol{P}$，使得 $\boldsymbol{A} = \boldsymbol{P}\boldsymbol{\Lambda}\boldsymbol{P}^{-1}$
+
+(C) 存在正交矩阵 $\boldsymbol{Q}$，使得 $\boldsymbol{A} = \boldsymbol{Q}\boldsymbol{\Lambda}\boldsymbol{Q}^{-1}$
+
+(D) 存在可逆矩阵 $\boldsymbol{P}$，使得 $\boldsymbol{A} = \boldsymbol{P}\boldsymbol{\Lambda}\boldsymbol{P}^{\mathrm{T}}$
 
 \vfill
 \newpage
-\qn{2022.9}
+{\large\bfseries 2022.9}
+
 设矩阵 $\boldsymbol{A} = \begin{pmatrix} 1 & 1 & 1 \\ 1 & a & a^2 \\ 1 & b & b^2 \end{pmatrix}$，$\boldsymbol{b} = \begin{pmatrix} 1 \\ 2 \\ 4 \end{pmatrix}$，则线性方程组 $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ 解的情况为（　　）
-\\
-\noindent (A) 无解　　(B) 有解　　(C) 有无穷多解或无解　　(D) 有唯一解或无解
+
+(A) 无解　　(B) 有解　　(C) 有无穷多解或无解　　(D) 有唯一解或无解
 
 \vfill
 \newpage
-\qn{2022.10}
+{\large\bfseries 2022.10}
+
 设 $\boldsymbol{\alpha}_1 = \begin{pmatrix} \lambda \\ 1 \\ 1 \end{pmatrix}$，$\boldsymbol{\alpha}_2 = \begin{pmatrix} 1 \\ \lambda \\ 1 \end{pmatrix}$，$\boldsymbol{\alpha}_3 = \begin{pmatrix} 1 \\ 1 \\ \lambda \end{pmatrix}$，$\boldsymbol{\alpha}_4 = \begin{pmatrix} 1 \\ \lambda \\ \lambda^2 \end{pmatrix}$，若向量组 $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3$ 与 $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_4$ 等价，则 $\lambda$ 的取值范围是（　　）
-\\
-\noindent (A) $\{0, 1\}$　　(B) $\{\lambda \mid \lambda \in \boldsymbol{R}, \lambda \neq 2\}$　　(C) $\{\lambda \mid \lambda \in \boldsymbol{R}, \lambda \neq -1, \lambda \neq -2\}$　　(D) $\{\lambda \mid \lambda \in \boldsymbol{R}, \lambda \neq -1\}$
+
+(A) $\{0, 1\}$　　(B) $\{\lambda \mid \lambda \in \boldsymbol{R}, \lambda \neq 2\}$　　(C) $\{\lambda \mid \lambda \in \boldsymbol{R}, \lambda \neq -1, \lambda \neq -2\}$　　(D) $\{\lambda \mid \lambda \in \boldsymbol{R}, \lambda \neq -1\}$
 
 \vfill
 \newpage
-\qn{2022.11}
-$\lim_{x\to 0}\left(\frac{1+\mathrm{e}^x}{2}\right)^{\cot x} =$______。
+{\large\bfseries 2022.11}
+
+$\lim_{x\to 0}\left(\frac{1+\mathrm{e}^x}{2}\right)^{\cot x} =$\underline{\hspace{20mm}}。
 
 \vfill
 \newpage
-\qn{2022.12}
-已知函数 $y = y(x)$ 由方程 $x^2 + xy + y^3 = 3$ 确定，则 $y''(1) =$______。
+{\large\bfseries 2022.12}
+
+已知函数 $y = y(x)$ 由方程 $x^2 + xy + y^3 = 3$ 确定，则 $y''(1) =$\underline{\hspace{20mm}}。
 
 \vfill
 \newpage
-\qn{2022.13}
-$\int_{0}^{1}\frac{2x+3}{x^2-x+1}\,\mathrm{d}x =$______。
+{\large\bfseries 2022.13}
+
+$\int_{0}^{1}\frac{2x+3}{x^2-x+1}\,\mathrm{d}x =$\underline{\hspace{20mm}}。
 
 \vfill
 \newpage
-\qn{2022.14}
-微分方程 $y''' - 2y'' + 5y' = 0$ 的通解 $y(x) =$______。
+{\large\bfseries 2022.14}
+
+微分方程 $y''' - 2y'' + 5y' = 0$ 的通解 $y(x) =$\underline{\hspace{20mm}}。
 
 \vfill
 \newpage
-\qn{2022.15}
-已知曲线 $L$ 的极坐标方程为 $r = \sin 3\theta\left(0 \leqslant \theta \leqslant \dfrac{\pi}{3}\right)$，则 $L$ 围成有界区域的面积为______。
+{\large\bfseries 2022.15}
+
+已知曲线 $L$ 的极坐标方程为 $r = \sin 3\theta\left(0 \leqslant \theta \leqslant \dfrac{\pi}{3}\right)$，则 $L$ 围成有界区域的面积为\underline{\hspace{20mm}}。
 
 \vfill
 \newpage
-\qn{2022.16}
-设 $\boldsymbol{A}$ 为 3 阶矩阵，交换 $\boldsymbol{A}$ 的第 2 行和第 3 行，再将第 2 列的 $-1$ 倍加到第 1 列，得到矩阵 $\begin{pmatrix} -2 & 1 & -1 \\ 1 & -1 & 0 \\ -1 & 0 & 0 \end{pmatrix}$，则 $\boldsymbol{A}^{-1}$ 的迹 $\mathrm{tr}(\boldsymbol{A}^{-1}) =$______。
+{\large\bfseries 2022.16}
+
+设 $\boldsymbol{A}$ 为 3 阶矩阵，交换 $\boldsymbol{A}$ 的第 2 行和第 3 行，再将第 2 列的 $-1$ 倍加到第 1 列，得到矩阵 $\begin{pmatrix} -2 & 1 & -1 \\ 1 & -1 & 0 \\ -1 & 0 & 0 \end{pmatrix}$，则 $\boldsymbol{A}^{-1}$ 的迹 $\mathrm{tr}(\boldsymbol{A}^{-1}) =$\underline{\hspace{20mm}}。
 
 \vfill
 \newpage
-\qn{2022.17}
+{\large\bfseries 2022.17}
+
 （本题满分10分）
+
 已知函数 $f(x)$ 在 $x = 1$ 处可导且 $\lim_{x\to 0}\frac{f(\mathrm{e}^{x^2}) - 3f(1+\sin^2 x)}{x^2} = 2$，求 $f'(1)$。
 
 \vfill
 \newpage
-\qn{2022.18}
+{\large\bfseries 2022.18}
+
 （本题满分12分）
+
 设函数 $y(x)$ 是微分方程 $2xy' - 4y = 2\ln x - 1$ 满足条件 $y(1) = \dfrac{1}{4}$ 的解，求曲线 $y = y(x)\ (1 \leqslant x \leqslant \mathrm{e})$ 的弧长。
 
 \vfill
 \newpage
-\qn{2022.19}
+{\large\bfseries 2022.19}
+
 （本题满分12分）
+
 已知平面区域 $D = \{(x,y) \mid y - 2 \leqslant x \leqslant \sqrt{4-y^2},\, 0 \leqslant y \leqslant 2\}$，计算 $I = \iint_D \frac{(x-y)^2}{x^2+y^2}\,\mathrm{d}x\mathrm{d}y$
 
 \vfill
 \newpage
-\qn{2022.20}
+{\large\bfseries 2022.20}
+
 （本题满分12分）
+
 已知可微函数 $f(u,v)$ 满足 $\frac{\partial f(u,v)}{\partial u} - \frac{\partial f(u,v)}{\partial v} = 2(u-v)\mathrm{e}^{-(u+v)}$，且 $f(u,0) = u^2\mathrm{e}^{-u}$。
-\\
+
 （Ⅰ）记 $g(x,y) = f(x, y-x)$，求 $\dfrac{\partial g(x,y)}{\partial x}$；
-\\
+
 （Ⅱ）求 $f(u,v)$ 的表达式和极值。
 
 \vfill
 \newpage
-\qn{2022.21}
+{\large\bfseries 2022.21}
+
 （本题满分12分）
+
 设函数 $f(x)$ 在 $(-\infty, +\infty)$ 内具有 2 阶连续导数，证明：$f''(x) \geqslant 0$ 的充分必要条件是：对不同的实数 $a, b$，$f\left(\frac{a+b}{2}\right) \leqslant \frac{1}{b-a}\int_{a}^{b} f(x)\,\mathrm{d}x$
 
 \vfill
 \newpage
-\qn{2022.22}
+{\large\bfseries 2022.22}
+
 （本题满分12分）
+
 已知二次型 $f(x_1, x_2, x_3) = 3x_1^2 + 4x_2^2 + 3x_3^2 + 2x_1x_3$。
-\\
+
 （Ⅰ）求正交变换 $\boldsymbol{x} = \boldsymbol{Q}\boldsymbol{y}$ 将 $f(x_1, x_2, x_3)$ 化为标准形；
-\\
+
 （Ⅱ）证明 $\min_{\boldsymbol{x} \neq \boldsymbol{0}}\frac{f(\boldsymbol{x})}{\boldsymbol{x}^{\mathrm{T}}\boldsymbol{x}} = 2$
 
 \vfill
-\newpage
 \end{document}
