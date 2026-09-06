@@ -1,182 +1,248 @@
-\documentclass[UTF8,12pt]{ctexart}
-\usepackage[paperwidth=240mm,paperheight=200mm,margin=14mm,top=8mm]{geometry}
-\usepackage{amsmath,amssymb,mathtools}
-\usepackage{xcolor}
+\documentclass[UTF8,12pt,fontset=windows]{ctexart}
+\usepackage[paperwidth=240mm,paperheight=200mm,left=14mm,right=14mm,top=9mm,bottom=12mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm,graphicx,xcolor}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-\newcommand{\qn}[1]{\textbf{\large #1}\ }
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
 \xeCJKDeclareCharClass{CJK}{"2460 -> "24FF}
+\xeCJKDeclareCharClass{CJK}{"2160 -> "2188}
 \begin{document}
-\qn{2025.1}
+{\large\bfseries 2025.1}
+
 设函数 $z=z(x,y)$ 由 $z+\ln z-\int_y^x\mathrm{e}^{-t^2}\,\mathrm{d}t=0$ 确定，则 $\dfrac{\partial z}{\partial x}+\dfrac{\partial z}{\partial y}=$（　　）
-\\
-\noindent (A) $\dfrac{z}{z+1}(\mathrm{e}^{-x^2}-\mathrm{e}^{-y^2})$. \qquad (B) $\dfrac{z}{z+1}(\mathrm{e}^{-x^2}+\mathrm{e}^{-y^2})$.
-\\
-\noindent (C) $-\dfrac{z}{z+1}(\mathrm{e}^{-x^2}-\mathrm{e}^{-y^2})$. \qquad (D) $-\dfrac{z}{z+1}(\mathrm{e}^{-x^2}+\mathrm{e}^{-y^2})$.
+
+(A) $\dfrac{z}{z+1}(\mathrm{e}^{-x^2}-\mathrm{e}^{-y^2})$.
+
+(B) $\dfrac{z}{z+1}(\mathrm{e}^{-x^2}+\mathrm{e}^{-y^2})$.
+
+(C) $-\dfrac{z}{z+1}(\mathrm{e}^{-x^2}-\mathrm{e}^{-y^2})$.
+
+(D) $-\dfrac{z}{z+1}(\mathrm{e}^{-x^2}+\mathrm{e}^{-y^2})$.
 
 \vfill
 \newpage
-\qn{2025.2}
+{\large\bfseries 2025.2}
+
 已知函数 $f(x)=\int_0^x\mathrm{e}^{t^2}\sin t\,\mathrm{d}t$，$g(x)=\int_0^x\mathrm{e}^{t^2}\,\mathrm{d}t\cdot\sin^2 x$，则（　　）
-\\
-\noindent (A) $x=0$ 是 $f(x)$ 的极值点，也是 $g(x)$ 的极值点.
-\\
-\noindent (B) $x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是曲线 $y=g(x)$ 的拐点.
-\\
-\noindent (C) $x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是曲线 $y=f(x)$ 的拐点.
-\\
-\noindent (D) $(0,0)$ 是曲线 $y=f(x)$ 的拐点，也是曲线 $y=g(x)$ 的拐点.
+
+(A) $x=0$ 是 $f(x)$ 的极值点，也是 $g(x)$ 的极值点.
+
+(B) $x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是曲线 $y=g(x)$ 的拐点.
+
+(C) $x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是曲线 $y=f(x)$ 的拐点.
+
+(D) $(0,0)$ 是曲线 $y=f(x)$ 的拐点，也是曲线 $y=g(x)$ 的拐点.
 
 \vfill
 \newpage
-\qn{2025.3}
+{\large\bfseries 2025.3}
+
 如果对微分方程 $y''-2ay'+(a+2)y=0$ 的任一解 $y(x)$，反常积分 $\int_0^{+\infty}y(x)\,\mathrm{d}x$ 均收敛，那么 $a$ 的取值范围是（　　）
-\\
-\noindent (A) $(-2,-1]$. \qquad (B) $(-\infty,-1]$. \qquad (C) $(-2,0)$. \qquad (D) $(-\infty,0)$.
+
+(A) $(-2,-1]$.
+
+(B) $(-\infty,-1]$.
+
+(C) $(-2,0)$.
+
+(D) $(-\infty,0)$.
 
 \vfill
 \newpage
-\qn{2025.4}
+{\large\bfseries 2025.4}
+
 设函数 $f(x),g(x)$ 在 $x=0$ 的某去心邻域内有定义且恒不为零. 若当 $x\to0$ 时，$f(x)$ 是 $g(x)$ 的高阶无穷小，则当 $x\to0$ 时，（　　）
-\\
-\noindent (A) $f(x)+g(x)=o(g(x))$. \qquad (B) $f(x)g(x)=o(f^2(x))$.
-\\
-\noindent (C) $f(x)=o(\mathrm{e}^{g(x)}-1)$. \qquad (D) $f(x)=o(g^2(x))$.
+
+(A) $f(x)+g(x)=o(g(x))$.
+
+(B) $f(x)g(x)=o(f^2(x))$.
+
+(C) $f(x)=o(\mathrm{e}^{g(x)}-1)$.
+
+(D) $f(x)=o(g^2(x))$.
 
 \vfill
 \newpage
-\qn{2025.5}
+{\large\bfseries 2025.5}
+
 设函数 $f(x,y)$ 连续，则 $\int_{-2}^{2}\mathrm{d}x\int_{4-x^2}^{4} f(x,y)\,\mathrm{d}y=$（　　）
-\\
-\noindent (A) $\int_0^4\left[\int_{-2}^{-\sqrt{4-y}}f(x,y)\,\mathrm{d}x+\int_{\sqrt{4-y}}^2f(x,y)\,\mathrm{d}x\right]\mathrm{d}y$
-\\
-\noindent (B) $\int_0^4\left[\int_{-2}^{\sqrt{4-y}}f(x,y)\,\mathrm{d}x+\int_{\sqrt{4-y}}^2f(x,y)\,\mathrm{d}x\right]\mathrm{d}y$
-\\
-\noindent (C) $\int_0^4\left[\int_{-2}^{-\sqrt{4-y}}f(x,y)\,\mathrm{d}x+\int_2^{\sqrt{4-y}}f(x,y)\,\mathrm{d}x\right]\mathrm{d}y$
-\\
-\noindent (D) $2\int_0^4\mathrm{d}y\int_{\sqrt{4-y}}^2f(x,y)\,\mathrm{d}x$
+
+(A) $\int_0^4\left[\int_{-2}^{-\sqrt{4-y}}f(x,y)\,\mathrm{d}x+\int_{\sqrt{4-y}}^2f(x,y)\,\mathrm{d}x\right]\mathrm{d}y$
+
+(B) $\int_0^4\left[\int_{-2}^{\sqrt{4-y}}f(x,y)\,\mathrm{d}x+\int_{\sqrt{4-y}}^2f(x,y)\,\mathrm{d}x\right]\mathrm{d}y$
+
+(C) $\int_0^4\left[\int_{-2}^{-\sqrt{4-y}}f(x,y)\,\mathrm{d}x+\int_2^{\sqrt{4-y}}f(x,y)\,\mathrm{d}x\right]\mathrm{d}y$
+
+(D) $2\int_0^4\mathrm{d}y\int_{\sqrt{4-y}}^2f(x,y)\,\mathrm{d}x$
 
 \vfill
 \newpage
-\qn{2025.6}
+{\large\bfseries 2025.6}
+
 设单位质点 $P,Q$ 分别位于点 $(0,0)$ 和 $(0,1)$ 处. $P$ 从点 $(0,0)$ 出发沿 $x$ 轴正向移动，记 $G$ 为引力常量，则当质点 $P$ 移动到点 $(l,0)$ 时，克服质点 $Q$ 的引力所做的功为（　　）
-\\
-\noindent (A) $\int_0^l\dfrac{G}{x^2+1}\,\mathrm{d}x$. \qquad (B) $\int_0^l\dfrac{Gx}{(x^2+1)^{\frac{3}{2}}}\,\mathrm{d}x$.
-\\
-\noindent (C) $\int_0^l\dfrac{G}{(x^2+1)^{\frac{3}{2}}}\,\mathrm{d}x$. \qquad (D) $\int_0^l\dfrac{G(x+1)}{(x^2+1)^{\frac{3}{2}}}\,\mathrm{d}x$.
+
+(A) $\int_0^l\dfrac{G}{x^2+1}\,\mathrm{d}x$.
+
+(B) $\int_0^l\dfrac{Gx}{(x^2+1)^{\frac{3}{2}}}\,\mathrm{d}x$.
+
+(C) $\int_0^l\dfrac{G}{(x^2+1)^{\frac{3}{2}}}\,\mathrm{d}x$.
+
+(D) $\int_0^l\dfrac{G(x+1)}{(x^2+1)^{\frac{3}{2}}}\,\mathrm{d}x$.
 
 \vfill
 \newpage
-\qn{2025.7}
+{\large\bfseries 2025.7}
+
 设函数 $f(x)$ 连续，给出下列四个条件：
+
 ① $\lim\limits_{x\to0}\dfrac{|f(x)|-f(0)}{x}$ 存在；
+
 ② $\lim\limits_{x\to0}\dfrac{f(x)-|f(0)|}{x}$ 存在；
+
 ③ $\lim\limits_{x\to0}\dfrac{|f(x)|}{x}$ 存在；
+
 ④ $\lim\limits_{x\to0}\dfrac{|f(x)|-|f(0)|}{x}$ 存在.
+
 其中能得到“$f(x)$ 在 $x=0$ 处可导”的条件的个数是（　　）
-\\
-\noindent (A) 1. \qquad (B) 2. \qquad (C) 3. \qquad (D) 4.
+
+(A) 1.
+
+(B) 2.
+
+(C) 3.
+
+(D) 4.
 
 \vfill
 \newpage
-\qn{2025.8}
+{\large\bfseries 2025.8}
+
 设矩阵 $\begin{pmatrix}1&2&0\\2&a&0\\0&0&b\end{pmatrix}$ 有一个正特征值和两个负特征值，则（　　）
-\\
-\noindent (A) $a>4,b>0$. \qquad (B) $a<4,b>0$. \qquad (C) $a>4,b<0$. \qquad (D) $a<4,b<0$.
+
+(A) $a>4,b>0$.
+
+(B) $a<4,b>0$.
+
+(C) $a>4,b<0$.
+
+(D) $a<4,b<0$.
 
 \vfill
 \newpage
-\qn{2025.9}
+{\large\bfseries 2025.9}
+
 下列矩阵中，可以经过若干初等行变换得到矩阵 $\begin{pmatrix}1&1&0&1\\0&0&1&2\\0&0&0&0\end{pmatrix}$ 的是（　　）
-\\
-\noindent (A) $\begin{pmatrix}1&1&0&1\\1&2&1&3\\2&3&1&4\end{pmatrix}$. \qquad (B) $\begin{pmatrix}1&1&0&1\\1&1&2&5\\1&1&1&3\end{pmatrix}$.
-\\
-\noindent (C) $\begin{pmatrix}1&0&0&1\\0&1&0&3\\0&1&0&0\end{pmatrix}$. \qquad (D) $\begin{pmatrix}1&1&2&3\\1&2&2&3\\2&3&4&6\end{pmatrix}$.
+
+(A) $\begin{pmatrix}1&1&0&1\\1&2&1&3\\2&3&1&4\end{pmatrix}$.
+
+(B) $\begin{pmatrix}1&1&0&1\\1&1&2&5\\1&1&1&3\end{pmatrix}$.
+
+(C) $\begin{pmatrix}1&0&0&1\\0&1&0&3\\0&1&0&0\end{pmatrix}$.
+
+(D) $\begin{pmatrix}1&1&2&3\\1&2&2&3\\2&3&4&6\end{pmatrix}$.
 
 \vfill
 \newpage
-\qn{2025.10}
+{\large\bfseries 2025.10}
+
 设3阶矩阵 $\boldsymbol{A},\boldsymbol{B}$ 满足 $r(\boldsymbol{AB})=r(\boldsymbol{BA})+1$，则（　　）
-\\
-\noindent (A) 方程组 $(\boldsymbol{A}+\boldsymbol{B})\boldsymbol{x}=\boldsymbol{0}$ 只有零解.
-\\
-\noindent (B) 方程组 $\boldsymbol{Ax}=\boldsymbol{0}$ 与方程组 $\boldsymbol{Bx}=\boldsymbol{0}$ 均只有零解.
-\\
-\noindent (C) 方程组 $\boldsymbol{Ax}=\boldsymbol{0}$ 与方程组 $\boldsymbol{Bx}=\boldsymbol{0}$ 没有公共非零解.
-\\
-\noindent (D) 方程组 $\boldsymbol{ABAx}=\boldsymbol{0}$ 与方程组 $\boldsymbol{BABx}=\boldsymbol{0}$ 有公共非零解.
+
+(A) 方程组 $(\boldsymbol{A}+\boldsymbol{B})\boldsymbol{x}=\boldsymbol{0}$ 只有零解.
+
+(B) 方程组 $\boldsymbol{Ax}=\boldsymbol{0}$ 与方程组 $\boldsymbol{Bx}=\boldsymbol{0}$ 均只有零解.
+
+(C) 方程组 $\boldsymbol{Ax}=\boldsymbol{0}$ 与方程组 $\boldsymbol{Bx}=\boldsymbol{0}$ 没有公共非零解.
+
+(D) 方程组 $\boldsymbol{ABAx}=\boldsymbol{0}$ 与方程组 $\boldsymbol{BABx}=\boldsymbol{0}$ 有公共非零解.
 
 \vfill
 \newpage
-\qn{2025.11}
-设 $\int_1^{+\infty}\dfrac{a}{x(2x+a)}\,\mathrm{d}x=\ln2$，则 $a=$________.
+{\large\bfseries 2025.11}
+
+设 $\int_1^{+\infty}\dfrac{a}{x(2x+a)}\,\mathrm{d}x=\ln2$，则 $a=$\underline{\hspace{20mm}}.
 
 \vfill
 \newpage
-\qn{2025.12}
-曲线 $y=\sqrt[3]{x^3-3x^2+1}$ 的渐近线方程为________.
+{\large\bfseries 2025.12}
+
+曲线 $y=\sqrt[3]{x^3-3x^2+1}$ 的渐近线方程为\underline{\hspace{20mm}}.
 
 \vfill
 \newpage
-\qn{2025.13}
-$\lim\limits_{n\to\infty}\dfrac{1}{n^2}\left[\ln\dfrac{1}{n}+2\ln\dfrac{2}{n}+\cdots+(n-1)\ln\dfrac{n-1}{n}\right]=$________.
+{\large\bfseries 2025.13}
+
+$\lim\limits_{n\to\infty}\dfrac{1}{n^2}\left[\ln\dfrac{1}{n}+2\ln\dfrac{2}{n}+\cdots+(n-1)\ln\dfrac{n-1}{n}\right]=$\underline{\hspace{20mm}}.
 
 \vfill
 \newpage
-\qn{2025.14}
-已知函数 $y=y(x)$ 由 $\begin{cases}x=\ln(1+2t),\\[4pt]2t-\int_1^{y+t^2}\mathrm{e}^{-u^2}\,\mathrm{d}u=0\end{cases}$ 确定，则 $\dfrac{\mathrm{d}y}{\mathrm{d}x}\bigg|_{t=0}=$________.
+{\large\bfseries 2025.14}
+
+已知函数 $y=y(x)$ 由 $\begin{cases}x=\ln(1+2t),\\[4pt]2t-\int_1^{y+t^2}\mathrm{e}^{-u^2}\,\mathrm{d}u=0\end{cases}$ 确定，则 $\dfrac{\mathrm{d}y}{\mathrm{d}x}\bigg|_{t=0}=$\underline{\hspace{20mm}}.
 
 \vfill
 \newpage
-\qn{2025.15}
-微分方程 $(2y-3x)\,\mathrm{d}x+(2x-5y)\,\mathrm{d}y=0$ 满足条件 $y(1)=1$ 的解为________.
+{\large\bfseries 2025.15}
+
+微分方程 $(2y-3x)\,\mathrm{d}x+(2x-5y)\,\mathrm{d}y=0$ 满足条件 $y(1)=1$ 的解为\underline{\hspace{20mm}}.
 
 \vfill
 \newpage
-\qn{2025.16}
-设矩阵 $\boldsymbol{A}=(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4)$，若 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3$ 线性无关，且 $\boldsymbol{\alpha}_1+\boldsymbol{\alpha}_2=\boldsymbol{\alpha}_3+\boldsymbol{\alpha}_4$，则方程组 $\boldsymbol{Ax}=\boldsymbol{\alpha}_1+4\boldsymbol{\alpha}_4$ 的通解为 $\boldsymbol{x}=$________.
+{\large\bfseries 2025.16}
+
+设矩阵 $\boldsymbol{A}=(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4)$，若 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3$ 线性无关，且 $\boldsymbol{\alpha}_1+\boldsymbol{\alpha}_2=\boldsymbol{\alpha}_3+\boldsymbol{\alpha}_4$，则方程组 $\boldsymbol{Ax}=\boldsymbol{\alpha}_1+4\boldsymbol{\alpha}_4$ 的通解为 $\boldsymbol{x}=$\underline{\hspace{20mm}}.
 
 \vfill
 \newpage
-\qn{2025.17}
+{\large\bfseries 2025.17}
+
 （本题满分10分）
+
 计算 $\int_0^1\dfrac{1}{(x+1)(x^2-2x+2)}\,\mathrm{d}x$.
 
 \vfill
 \newpage
-\qn{2025.18}
+{\large\bfseries 2025.18}
+
 （本题满分12分）
+
 设函数 $f(x)$ 在 $x=0$ 处连续，且 $\lim\limits_{x\to0}\dfrac{xf(x)-\mathrm{e}^{2\sin x}+1}{\ln(1+x)+\ln(1-x)}=-3$，证明 $f(x)$ 在 $x=0$ 处可导，并求 $f'(0)$.
 
 \vfill
 \newpage
-\qn{2025.19}
+{\large\bfseries 2025.19}
+
 （本题满分12分）
+
 设函数 $f(x,y)$ 可微且满足 $\mathrm{d}f(x,y)=-2x\mathrm{e}^{-y}\,\mathrm{d}x+\mathrm{e}^{-y}(x^2-y-1)\,\mathrm{d}y$，$f(0,0)=2$，求 $f(x,y)$，并求 $f(x,y)$ 的极值.
 
 \vfill
 \newpage
-\qn{2025.20}
+{\large\bfseries 2025.20}
+
 （本题满分12分）
+
 已知平面有界区域 $D=\{(x,y)\mid x^2+y^2\leqslant4x,\;x^2+y^2\leqslant4y\}$，计算 $\iint_D(x-y)^2\,\mathrm{d}x\mathrm{d}y$.
 
 \vfill
 \newpage
-\qn{2025.21}
+{\large\bfseries 2025.21}
+
 （本题满分12分）
+
 设函数 $f(x)$ 在区间 $(a,b)$ 内可导，证明：导函数 $f'(x)$ 在 $(a,b)$ 内严格单调增加的充分必要条件是对 $(a,b)$ 内任意的 $x_1,x_2,x_3$，当 $x_1<x_2<x_3$ 时，$\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$.
 
 \vfill
 \newpage
-\qn{2025.22}
+{\large\bfseries 2025.22}
+
 （本题满分12分）
+
 已知矩阵 $\boldsymbol{A}=\begin{pmatrix}4&1&-2\\1&1&1\\-2&1&a\end{pmatrix}$ 与 $\boldsymbol{B}=\begin{pmatrix}k&0&0\\0&6&0\\0&0&0\end{pmatrix}$ 合同.
-\\
+
 （1）求 $a$ 的值及 $k$ 的取值范围；
-\\
+
 （2）若存在正交矩阵 $\boldsymbol{Q}$，使得 $\boldsymbol{Q}^{\mathrm{T}}\boldsymbol{AQ}=\boldsymbol{B}$，求 $k$ 及 $\boldsymbol{Q}$.
 
 \vfill
-\newpage
 \end{document}
