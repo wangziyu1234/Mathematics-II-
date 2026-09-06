@@ -1,207 +1,240 @@
-\documentclass[UTF8,12pt]{ctexart}
-\usepackage[paperwidth=240mm,paperheight=200mm,margin=14mm,top=8mm]{geometry}
-\usepackage{amsmath,amssymb,mathtools}
-\usepackage{xcolor}
+\documentclass[UTF8,12pt,fontset=windows]{ctexart}
+\usepackage[paperwidth=240mm,paperheight=200mm,left=14mm,right=14mm,top=9mm,bottom=12mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm,graphicx,xcolor}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-\newcommand{\qn}[1]{\textbf{\large #1}\ }
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
 \xeCJKDeclareCharClass{CJK}{"2460 -> "24FF}
+\xeCJKDeclareCharClass{CJK}{"2160 -> "2188}
 \begin{document}
-\qn{2015.1}
+{\large\bfseries 2015.1}
+
 下列反常积分中收敛的是（　）
-\\
-\noindent （A）$\int_2^{+\infty} \frac{1}{\sqrt{x}}\,\mathrm{d}x$.
-\\
-\noindent （B）$\int_2^{+\infty} \frac{\ln x}{x}\,\mathrm{d}x$.
-\\
-\noindent （C）$\int_2^{+\infty} \frac{1}{x\ln x}\,\mathrm{d}x$.
-\\
-\noindent （D）$\int_2^{+\infty} \frac{x}{e^x}\,\mathrm{d}x$.
+
+（A）$\int_2^{+\infty} \frac{1}{\sqrt{x}}\,\mathrm{d}x$.
+
+（B）$\int_2^{+\infty} \frac{\ln x}{x}\,\mathrm{d}x$.
+
+（C）$\int_2^{+\infty} \frac{1}{x\ln x}\,\mathrm{d}x$.
+
+（D）$\int_2^{+\infty} \frac{x}{e^x}\,\mathrm{d}x$.
 
 \vfill
 \newpage
-\qn{2015.2}
+{\large\bfseries 2015.2}
+
 函数 $f(x) = \lim_{t \to 0} \left(1 + \frac{\sin t}{x}\right)^{\frac{x^2}{t}}$ 在 $(-\infty, +\infty)$ 内（　）
-\\
-\noindent （A）连续.
-\\
-\noindent （B）有可去间断点.
-\\
-\noindent （C）有跳跃间断点.
-\\
-\noindent （D）有无穷间断点.
+
+（A）连续.
+
+（B）有可去间断点.
+
+（C）有跳跃间断点.
+
+（D）有无穷间断点.
 
 \vfill
 \newpage
-\qn{2015.3}
+{\large\bfseries 2015.3}
+
 设函数 $f(x) = \begin{cases} x^{\alpha}\cos\frac{1}{x^{\beta}}, & x > 0, \\ 0, & x \leqslant 0, \end{cases} \ (\alpha > 0, \beta > 0)$. 若 $f'(x)$ 在 $x = 0$ 处连续，则（　）
-\\
-\noindent （A）$\alpha - \beta > 1$.
-\\
-\noindent （B）$0 < \alpha - \beta \leqslant 1$.
-\\
-\noindent （C）$\alpha - \beta > 2$.
-\\
-\noindent （D）$0 < \alpha - \beta \leqslant 2$.
+
+（A）$\alpha - \beta > 1$.
+
+（B）$0 < \alpha - \beta \leqslant 1$.
+
+（C）$\alpha - \beta > 2$.
+
+（D）$0 < \alpha - \beta \leqslant 2$.
 
 \vfill
 \newpage
-\qn{2015.4}
-设函数在 $(-\infty, +\infty)$ 内连续，其2阶导函数 $f''(x)$ 的图形如右图所示，则曲线 $y = f(x)$ 的拐点个数为（　）
-\\
-\noindent （A）0.
-\\
-\noindent （B）1.
-\\
-\noindent （C）2.
-\\
-\noindent （D）3.
+{\large\bfseries 2015.4}
+
+设函数 $f(x)$ 在 $(-\infty, +\infty)$ 内连续，其2阶导函数 $f''(x)$ 的图形如右图所示，则曲线 $y = f(x)$ 的拐点个数为（　）
+
+\begin{center}\includegraphics[width=.62\textwidth,height=65mm,keepaspectratio]{_题图/2015.4.png}\end{center}
+
+（A）0.
+
+（B）1.
+
+（C）2.
+
+（D）3.
 
 \vfill
 \newpage
-\qn{2015.5}
+{\large\bfseries 2015.5}
+
 设函数 $f(u, v)$ 满足 $f\left(x + y, \frac{y}{x}\right) = x^2 - y^2$，则 $\left.\frac{\partial f}{\partial u}\right|_{\begin{smallmatrix} u = 1 \\ v = 1 \end{smallmatrix}}, \left.\frac{\partial f}{\partial v}\right|_{\begin{smallmatrix} u = 1 \\ v = 1 \end{smallmatrix}}$ 依次是（　）
-\\
-\noindent （A）$\frac{1}{2}, 0$.
-\\
-\noindent （B）$0, \frac{1}{2}$.
-\\
-\noindent （C）$-\frac{1}{2}, 0$.
-\\
-\noindent （D）$0, -\frac{1}{2}$.
+
+（A）$\frac{1}{2}, 0$.
+
+（B）$0, \frac{1}{2}$.
+
+（C）$-\frac{1}{2}, 0$.
+
+（D）$0, -\frac{1}{2}$.
 
 \vfill
 \newpage
-\qn{2015.6}
+{\large\bfseries 2015.6}
+
 设 $D$ 是第一象限中由曲线 $2xy = 1$，$4xy = 1$ 与直线 $y = x$，$y = \sqrt{3}x$ 围成的平面区域，函数 $f(x, y)$ 在 $D$ 上连续，则 $\iint_D f(x, y)\,\mathrm{d}x\mathrm{d}y =$（　）
-\\
-\noindent （A）$\int_{\frac{\pi}{4}}^{\frac{\pi}{3}}\mathrm{d}\theta \int_{\frac{1}{2\sin 2\theta}}^{\frac{1}{\sin 2\theta}} f(r\cos\theta, r\sin\theta)\,r\,\mathrm{d}r$.
-\\
-\noindent （B）$\int_{\frac{\pi}{4}}^{\frac{\pi}{3}}\mathrm{d}\theta \int_{\frac{1}{\sqrt{2\sin 2\theta}}}^{\frac{1}{\sqrt{\sin 2\theta}}} f(r\cos\theta, r\sin\theta)\,r\,\mathrm{d}r$.
-\\
-\noindent （C）$\int_{\frac{\pi}{4}}^{\frac{\pi}{3}}\mathrm{d}\theta \int_{\frac{1}{2\sin 2\theta}}^{\frac{1}{\sin 2\theta}} f(r\cos\theta, r\sin\theta)\,\mathrm{d}r$.
-\\
-\noindent （D）$\int_{\frac{\pi}{4}}^{\frac{\pi}{3}}\mathrm{d}\theta \int_{\frac{1}{\sqrt{2\sin 2\theta}}}^{\frac{1}{\sqrt{\sin 2\theta}}} f(r\cos\theta, r\sin\theta)\,\mathrm{d}r$.
+
+（A）$\int_{\frac{\pi}{4}}^{\frac{\pi}{3}}\mathrm{d}\theta \int_{\frac{1}{2\sin 2\theta}}^{\frac{1}{\sin 2\theta}} f(r\cos\theta, r\sin\theta)\,r\,\mathrm{d}r$.
+
+（B）$\int_{\frac{\pi}{4}}^{\frac{\pi}{3}}\mathrm{d}\theta \int_{\frac{1}{\sqrt{2\sin 2\theta}}}^{\frac{1}{\sqrt{\sin 2\theta}}} f(r\cos\theta, r\sin\theta)\,r\,\mathrm{d}r$.
+
+（C）$\int_{\frac{\pi}{4}}^{\frac{\pi}{3}}\mathrm{d}\theta \int_{\frac{1}{2\sin 2\theta}}^{\frac{1}{\sin 2\theta}} f(r\cos\theta, r\sin\theta)\,\mathrm{d}r$.
+
+（D）$\int_{\frac{\pi}{4}}^{\frac{\pi}{3}}\mathrm{d}\theta \int_{\frac{1}{\sqrt{2\sin 2\theta}}}^{\frac{1}{\sqrt{\sin 2\theta}}} f(r\cos\theta, r\sin\theta)\,\mathrm{d}r$.
 
 \vfill
 \newpage
-\qn{2015.7}
+{\large\bfseries 2015.7}
+
 设矩阵 $\boldsymbol{A} = \begin{pmatrix} 1 & 1 & 1 \\ 1 & 2 & a \\ 1 & 4 & a^2 \end{pmatrix}$，$\boldsymbol{b} = \begin{pmatrix} 1 \\ d \\ d^2 \end{pmatrix}$. 若集合 $\Omega = \{1, 2\}$，则线性方程组 $\boldsymbol{Ax} = \boldsymbol{b}$ 有无穷多解的充分必要条件为（　）
-\\
-\noindent （A）$a \notin \Omega, d \notin \Omega$.
-\\
-\noindent （B）$a \notin \Omega, d \in \Omega$.
-\\
-\noindent （C）$a \in \Omega, d \notin \Omega$.
-\\
-\noindent （D）$a \in \Omega, d \in \Omega$.
+
+（A）$a \notin \Omega, d \notin \Omega$.
+
+（B）$a \notin \Omega, d \in \Omega$.
+
+（C）$a \in \Omega, d \notin \Omega$.
+
+（D）$a \in \Omega, d \in \Omega$.
 
 \vfill
 \newpage
-\qn{2015.8}
+{\large\bfseries 2015.8}
+
 设二次型 $f(x_1, x_2, x_3)$ 在正交变换 $\boldsymbol{x} = \boldsymbol{Py}$ 下的标准形为 $2y_1^2 + y_2^2 - y_3^2$，其中 $\boldsymbol{P} = (\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3)$. 若 $\boldsymbol{Q} = (\boldsymbol{e}_1, -\boldsymbol{e}_3, \boldsymbol{e}_2)$，则 $f(x_1, x_2, x_3)$ 在正交变换 $\boldsymbol{x} = \boldsymbol{Qy}$ 下的标准形为（　）
-\\
-\noindent （A）$2y_1^2 - y_2^2 + y_3^2$.
-\\
-\noindent （B）$2y_1^2 + y_2^2 - y_3^2$.
-\\
-\noindent （C）$2y_1^2 - y_2^2 - y_3^2$.
-\\
-\noindent （D）$2y_1^2 + y_2^2 + y_3^2$.
+
+（A）$2y_1^2 - y_2^2 + y_3^2$.
+
+（B）$2y_1^2 + y_2^2 - y_3^2$.
+
+（C）$2y_1^2 - y_2^2 - y_3^2$.
+
+（D）$2y_1^2 + y_2^2 + y_3^2$.
 
 \vfill
 \newpage
-\qn{2015.9}
-设 $\begin{cases} x = \arctan t, \\ y = 3t + t^3, \end{cases}$ 则 $\left.\frac{\mathrm{d}^2y}{\mathrm{d}x^2}\right|_{t = 1} =$ ______.
+{\large\bfseries 2015.9}
+
+设 $\begin{cases} x = \arctan t, \\ y = 3t + t^3, \end{cases}$ 则 $\left.\frac{\mathrm{d}^2y}{\mathrm{d}x^2}\right|_{t = 1} =$ \underline{\hspace{20mm}}.
 
 \vfill
 \newpage
-\qn{2015.10}
-函数 $f(x) = x^2 2^x$ 在 $x = 0$ 处的 $n$ 阶导数 $f^{(n)}(0) =$ ______.
+{\large\bfseries 2015.10}
+
+函数 $f(x) = x^2 2^x$ 在 $x = 0$ 处的 $n$ 阶导数 $f^{(n)}(0) =$ \underline{\hspace{20mm}}.
 
 \vfill
 \newpage
-\qn{2015.11}
-设函数 $f(x)$ 连续，$\varphi(x) = \int_0^{x^2} xf(t)\,\mathrm{d}t$. 若 $\varphi(1) = 1$，$\varphi'(1) = 5$，则 $f(1) =$ ______.
+{\large\bfseries 2015.11}
+
+设函数 $f(x)$ 连续，$\varphi(x) = \int_0^{x^2} xf(t)\,\mathrm{d}t$. 若 $\varphi(1) = 1$，$\varphi'(1) = 5$，则 $f(1) =$ \underline{\hspace{20mm}}.
 
 \vfill
 \newpage
-\qn{2015.12}
-设函数 $y = y(x)$ 是微分方程 $y'' + y' - 2y = 0$ 的解，且在 $x = 0$ 处 $y(x)$ 取得极值3，则 $y(x) =$ ______.
+{\large\bfseries 2015.12}
+
+设函数 $y = y(x)$ 是微分方程 $y'' + y' - 2y = 0$ 的解，且在 $x = 0$ 处 $y(x)$ 取得极值3，则 $y(x) =$ \underline{\hspace{20mm}}.
 
 \vfill
 \newpage
-\qn{2015.13}
-若函数 $z = z(x, y)$ 由方程 $e^{x + 2y + 3z} + xyz = 1$ 确定，则 $\mathrm{d}z|_{(0, 0)} =$ ______.
+{\large\bfseries 2015.13}
+
+若函数 $z = z(x, y)$ 由方程 $e^{x + 2y + 3z} + xyz = 1$ 确定，则 $\mathrm{d}z|_{(0, 0)} =$ \underline{\hspace{20mm}}.
 
 \vfill
 \newpage
-\qn{2015.14}
-设3阶矩阵 $\boldsymbol{A}$ 的特征值为 $2, -2, 1$，$\boldsymbol{B} = \boldsymbol{A}^2 - \boldsymbol{A} + \boldsymbol{E}$，其中 $\boldsymbol{E}$ 为3阶单位矩阵，则行列式 $|\boldsymbol{B}| =$ ______.
+{\large\bfseries 2015.14}
+
+设3阶矩阵 $\boldsymbol{A}$ 的特征值为 $2, -2, 1$，$\boldsymbol{B} = \boldsymbol{A}^2 - \boldsymbol{A} + \boldsymbol{E}$，其中 $\boldsymbol{E}$ 为3阶单位矩阵，则行列式 $|\boldsymbol{B}| =$ \underline{\hspace{20mm}}.
 
 \vfill
 \newpage
-\qn{2015.15}
+{\large\bfseries 2015.15}
+
 （本题满分10分）
+
 设函数 $f(x) = x + a\ln(1 + x) + bx\sin x$，$g(x) = kx^3$. 若 $f(x)$ 与 $g(x)$ 在 $x \to 0$ 时是等价无穷小，求 $a$，$b$，$k$ 的值.
 
 \vfill
 \newpage
-\qn{2015.16}
+{\large\bfseries 2015.16}
+
 （本题满分10分）
+
 设 $A > 0$，$D$ 是由曲线段 $y = A\sin x \left(0 \leqslant x \leqslant \frac{\pi}{2}\right)$ 及直线 $y = 0$，$x = \frac{\pi}{2}$ 所围成的平面区域，$V_1$，$V_2$ 分别表示 $D$ 绕 $x$ 轴与绕 $y$ 轴旋转所成旋转体的体积. 若 $V_1 = V_2$，求 $A$ 的值.
 
 \vfill
 \newpage
-\qn{2015.17}
+{\large\bfseries 2015.17}
+
 （本题满分11分）
+
 已知函数 $f(x, y)$ 满足 $f''_{xy}(x, y) = 2(y + 1)e^x$，$f'_x(x, 0) = (x + 1)e^x$，$f(0, y) = y^2 + 2y$，求 $f(x, y)$ 的极值.
 
 \vfill
 \newpage
-\qn{2015.18}
+{\large\bfseries 2015.18}
+
 （本题满分10分）
+
 计算二重积分 $\iint_D x(x + y)\,\mathrm{d}x\mathrm{d}y$，其中 $D = \{(x, y) \mid x^2 + y^2 \leqslant 2, y \geqslant x^2\}$.
 
 \vfill
 \newpage
-\qn{2015.19}
+{\large\bfseries 2015.19}
+
 （本题满分11分）
+
 已知函数 $f(x) = \int_x^1 \sqrt{1 + t^2}\,\mathrm{d}t + \int_1^{x^2} \sqrt{1 + t}\,\mathrm{d}t$，求 $f(x)$ 零点的个数.
 
 \vfill
 \newpage
-\qn{2015.20}
+{\large\bfseries 2015.20}
+
 （本题满分10分）
+
 已知高温物体置于低温介质中，任一时刻该物体温度对时间的变化率与该时刻物体和介质的温差成正比. 现将一初始温度为 $120^\circ\mathrm{C}$ 的物体在 $20^\circ\mathrm{C}$ 的恒温介质中冷却，$30\mathrm{min}$ 后该物体温度降至 $30^\circ\mathrm{C}$，若要将该物体的温度继续降至 $21^\circ\mathrm{C}$，还需冷却多长时间？
 
 \vfill
 \newpage
-\qn{2015.21}
+{\large\bfseries 2015.21}
+
 （本题满分10分）
+
 已知函数 $f(x)$ 在区间 $[a, +\infty)$ 上具有2阶导数，$f(a) = 0$，$f'(x) > 0$，$f''(x) > 0$. 设 $b > a$，曲线 $y = f(x)$ 在点 $(b, f(b))$ 处的切线与 $x$ 轴的交点是 $(x_0, 0)$，证明 $a < x_0 < b$.
 
 \vfill
 \newpage
-\qn{2015.22}
+{\large\bfseries 2015.22}
+
 （本题满分11分）
+
 设矩阵 $\boldsymbol{A} = \begin{pmatrix} a & 1 & 0 \\ 1 & a & -1 \\ 0 & 1 & a \end{pmatrix}$，且 $\boldsymbol{A}^3 = \boldsymbol{O}$.
-\\
+
 （Ⅰ）求 $a$ 的值；
-\\
+
 （Ⅱ）若矩阵 $\boldsymbol{X}$ 满足 $\boldsymbol{X} - \boldsymbol{XA}^2 - \boldsymbol{AX} + \boldsymbol{AXA}^2 = \boldsymbol{E}$，其中 $\boldsymbol{E}$ 为3阶单位矩阵，求 $\boldsymbol{X}$.
 
 \vfill
 \newpage
-\qn{2015.23}
+{\large\bfseries 2015.23}
+
 （本题满分11分）
+
 设矩阵 $\boldsymbol{A} = \begin{pmatrix} 0 & 2 & -3 \\ -1 & 3 & -3 \\ 1 & -2 & a \end{pmatrix}$ 相似于矩阵 $\boldsymbol{B} = \begin{pmatrix} 1 & -2 & 0 \\ 0 & b & 0 \\ 0 & 3 & 1 \end{pmatrix}$.
-\\
+
 （Ⅰ）求 $a$，$b$ 的值；
-\\
+
 （Ⅱ）求可逆矩阵 $\boldsymbol{P}$，使 $\boldsymbol{P}^{-1}\boldsymbol{AP}$ 为对角矩阵.
 
 \vfill
-\newpage
 \end{document}
