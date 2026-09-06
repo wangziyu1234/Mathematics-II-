@@ -1,118 +1,162 @@
-\documentclass[UTF8,12pt]{ctexart}
-\usepackage[paperwidth=240mm,paperheight=200mm,margin=14mm,top=8mm]{geometry}
-\usepackage{amsmath,amssymb,mathtools}
-\usepackage{xcolor}
+\documentclass[UTF8,12pt,fontset=windows]{ctexart}
+\usepackage[paperwidth=240mm,paperheight=200mm,left=14mm,right=14mm,top=9mm,bottom=12mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm,graphicx,xcolor}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-\newcommand{\qn}[1]{\textbf{\large #1}\ }
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
 \xeCJKDeclareCharClass{CJK}{"2460 -> "24FF}
+\xeCJKDeclareCharClass{CJK}{"2160 -> "2188}
 \begin{document}
-\qn{2001.1}
+{\large\bfseries 2001.1}\quad {\small 原卷一（1）}
+
 $\lim_{x \to 1} \dfrac{\sqrt{3 - x} - \sqrt{1 + x}}{x^2 + x - 2} = \_\_\_\_\_\_.$
 
 \vfill
 \newpage
-\qn{2001.2}
+{\large\bfseries 2001.2}\quad {\small 原卷一（2）}
+
 设函数 $y = f(x)$ 由方程 $e^{2x + y} - \cos(xy) = e - 1$ 所确定，则曲线 $y = f(x)$ 在点 $(0,1)$ 处的法线方程为 $\_\_\_\_\_\_.$
 
 \vfill
 \newpage
-\qn{2001.3}
+{\large\bfseries 2001.3}\quad {\small 原卷一（3）}
+
 $\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} (x^3 + \sin^2 x)\cos^2 x \, dx = \_\_\_\_\_\_.$
 
 \vfill
 \newpage
-\qn{2001.4}
+{\large\bfseries 2001.4}\quad {\small 原卷一（4）}
+
 过点 $\left(\dfrac{1}{2}, 0\right)$ 且满足关系式 $y'\arcsin x + \dfrac{y}{\sqrt{1 - x^2}} = 1$ 的曲线方程为 $\_\_\_\_\_\_.$
 
 \vfill
 \newpage
-\qn{2001.5}
+{\large\bfseries 2001.5}\quad {\small 原卷一（5）}
+
 设方程组 $\begin{pmatrix} a & 1 & 1 \\ 1 & a & 1 \\ 1 & 1 & a \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} 1 \\ 1 \\ -2 \end{pmatrix}$ 有无穷多解，则 $a = \_\_\_\_\_\_.$
 
 \vfill
 \newpage
-\qn{2001.6}
+{\large\bfseries 2001.6}\quad {\small 原卷二（1）}
+
 设 $f(x) = \begin{cases} 1, & |x| \leqslant 1 \\ 0, & |x| > 1 \end{cases}$，则 $f\{f[f(x)]\}$ 等于（　）
-\\
-\noindent (A) $0$.　　　　　(B) $1$.
-\\
-\noindent (C) $\begin{cases} 1, & |x| \leqslant 1 \\ 0, & |x| > 1 \end{cases}$.　　　　　(D) $\begin{cases} 0, & |x| \leqslant 1 \\ 1, & |x| > 1 \end{cases}$.
+
+(A) $0$.　　　　　(B) $1$.
+
+(C) $\begin{cases} 1, & |x| \leqslant 1 \\ 0, & |x| > 1 \end{cases}$.　　　　　(D) $\begin{cases} 0, & |x| \leqslant 1 \\ 1, & |x| > 1 \end{cases}$.
 
 \vfill
 \newpage
-\qn{2001.7}
+{\large\bfseries 2001.7}\quad {\small 原卷二（2）}
+
 设当 $x \to 0$ 时，$(1 - \cos x)\ln(1 + x^2)$ 是比 $x\sin x^n$ 高阶的无穷小，$x\sin x^n$ 是比 $e^{x^2} - 1$ 高阶的无穷小，则正整数 $n$ 等于（　）
-\\
-\noindent (A) $1$.　　　　　(B) $2$.　　　　　(C) $3$.　　　　　(D) $4$.
+
+(A) $1$.　　　　　(B) $2$.　　　　　(C) $3$.　　　　　(D) $4$.
 
 \vfill
 \newpage
-\qn{2001.8}
+{\large\bfseries 2001.8}\quad {\small 原卷二（3）}
+
 曲线 $y = (x - 1)^2(x - 3)^2$ 的拐点个数为（　）
-\\
-\noindent (A) $0$.　　　　　(B) $1$.　　　　　(C) $2$.　　　　　(D) $3$.
+
+(A) $0$.　　　　　(B) $1$.　　　　　(C) $2$.　　　　　(D) $3$.
 
 \vfill
 \newpage
-\qn{2001.9}
+{\large\bfseries 2001.9}\quad {\small 原卷二（4）}
+
 已知函数 $f(x)$ 在区间 $(1 - \delta, 1 + \delta)$ 内具有二阶导数，$f'(x)$ 严格单调减少，且 $f(1) = f'(1) = 1$，则（　）
-\\
-\noindent (A) 在 $(1 - \delta, 1)$ 和 $(1, 1 + \delta)$ 内均有 $f(x) < x$.
-\\
-\noindent (B) 在 $(1 - \delta, 1)$ 和 $(1, 1 + \delta)$ 内均有 $f(x) > x$.
-\\
-\noindent (C) 在 $(1 - \delta, 1)$ 内 $f(x) < x$，在 $(1, 1 + \delta)$ 内 $f(x) > x$.
-\\
-\noindent (D) 在 $(1 - \delta, 1)$ 内 $f(x) > x$，在 $(1, 1 + \delta)$ 内 $f(x) < x$.
+
+(A) 在 $(1 - \delta, 1)$ 和 $(1, 1 + \delta)$ 内均有 $f(x) < x$.
+
+(B) 在 $(1 - \delta, 1)$ 和 $(1, 1 + \delta)$ 内均有 $f(x) > x$.
+
+(C) 在 $(1 - \delta, 1)$ 内 $f(x) < x$，在 $(1, 1 + \delta)$ 内 $f(x) > x$.
+
+(D) 在 $(1 - \delta, 1)$ 内 $f(x) > x$，在 $(1, 1 + \delta)$ 内 $f(x) < x$.
 
 \vfill
 \newpage
-\qn{2001.10}
-已知函数 $y = f(x)$ 在其定义域内可导，它的图形如右图所示，则其导函数 $y = f'(x)$ 的图形为（　）
-【本题题干直接给出 $y = f(x)$ 的曲线图形，选项 (A)(B)(C)(D) 为四条导数曲线图形，均为图形内容，无法以纯文本还原，需对照原扫描页。此处仅记其大致形态供参考。】
-\\
-\noindent (A) 【曲线图形】过原点，先上升后下降再上升，左支沿 $x$ 轴下方上升穿过原点，中部有一段近乎竖直的陡升，随后一个局部极大、再降至 $x$ 轴下方一个局部极小后回升.
-\\
-\noindent (B) 【曲线图形】与 (A) 形态相近，但左支起点在 $x$ 轴上方（第一象限）并向下越过原点附近，再经历局部极大、局部极小后回升.
-\\
-\noindent (C) 【曲线图形】曲线沿 $y$ 轴附近达到一个局部极大值，左支从 $x$ 轴下方上升；过峰值后下降至 $x$ 轴下方一个局部极小值，再回升.
-\\
-\noindent (D) 【曲线图形】以 $y$ 轴为对称轴（偶函数状），两侧向上各达一峰值，下方形成一个局部极小值后再回升.
+{\large\bfseries 2001.10}\quad {\small 原卷二（5）}
+
+已知函数 $y = f(x)$ 在其定义域内可导，它的图形如下图所示，则其导函数 $y = f'(x)$ 的图形为（　）
+
+\begin{center}\includegraphics[width=.62\textwidth,height=65mm,keepaspectratio]{_题图/2001.10.1.png}\end{center}
+
+\begin{center}\includegraphics[width=.9\textwidth,height=75mm,keepaspectratio]{_题图/2001.10.2.png}\end{center}
+
+\vfill
+\newpage
+{\large\bfseries 2001.11}\quad {\small 原卷三}
+
 求 $\int \dfrac{dx}{(2x^2 + 1)\sqrt{x^2 + 1}}$.
+
+\vfill
+\newpage
+{\large\bfseries 2001.12}\quad {\small 原卷四}
+
 求极限 $\lim_{t \to x} \left(\dfrac{\sin t}{\sin x}\right)^{\dfrac{x}{\sin t - \sin x}}$，记此极限为 $f(x)$，求函数 $f(x)$ 的间断点并指出其类型.
+
+\vfill
+\newpage
+{\large\bfseries 2001.13}\quad {\small 原卷五}
+
 设 $\rho = \rho(x)$ 是抛物线 $y = \sqrt{x}$ 上任一点 $M(x,y) \ (x \geqslant 1)$ 处的曲率半径，$s = s(x)$ 是该抛物线上介于点 $A(1,1)$ 与 $M$ 之间的弧长，计算 $3\rho\dfrac{d^2\rho}{ds^2} - \left(\dfrac{d\rho}{ds}\right)^2$ 的值.
+
 （在直角坐标系下曲率公式为 $K = \dfrac{|y''|}{(1 + y'^2)^{\frac{3}{2}}}$.）
+
+\vfill
+\newpage
+{\large\bfseries 2001.14}\quad {\small 原卷六}
+
 设函数 $f(x)$ 在 $[0, +\infty)$ 上可导，$f(0) = 0$，且其反函数为 $g(x)$. 若 $\int_0^{f(x)} g(t) \, dt = x^2 e^x$，求 $f(x)$.
+
+\vfill
+\newpage
+{\large\bfseries 2001.15}\quad {\small 原卷七}
+
 设函数 $f(x), g(x)$ 满足 $f'(x) = g(x)$，$g'(x) = 2e^x - f(x)$，且 $f(0) = 0$，$g(0) = 2$，求
+
 $$\int_0^\pi \left[\frac{g(x)}{1 + x} - \frac{f(x)}{(1 + x)^2}\right] dx.$$
+
+\vfill
+\newpage
+{\large\bfseries 2001.16}\quad {\small 原卷八}
+
 设 $L$ 是一条平面曲线，其上任意一点 $P(x,y) \ (x > 0)$ 到坐标原点的距离恒等于该点处的切线在 $y$ 轴上的截距，且 $L$ 经过点 $\left(\dfrac{1}{2}, 0\right)$.
 
-\vfill
-\newpage
-\qn{2001.11}
-试求曲线 $L$ 的方程；
+(1) 试求曲线 $L$ 的方程；
+
+(2) 求 $L$ 位于第一象限部分的一条切线，使该切线与 $L$ 以及两坐标轴所围图形的面积最小.
 
 \vfill
 \newpage
-\qn{2001.12}
-求 $L$ 位于第一象限部分的一条切线，使该切线与 $L$ 以及两坐标轴所围图形的面积最小.
+{\large\bfseries 2001.17}\quad {\small 原卷九}
+
 一个半球体状的雪堆，其体积融化的速率与半球面面积 $S$ 成正比，比例常数 $K > 0$. 假设在融化过程中雪堆始终保持半球体状，已知半径为 $r_0$ 的雪堆在开始融化的 3 小时内，融化了其体积的 $\dfrac{7}{8}$，问雪堆全部融化需要多少小时？
+
+\vfill
+\newpage
+{\large\bfseries 2001.18}\quad {\small 原卷十}
+
 设 $f(x)$ 在区间 $[-a, a] \ (a > 0)$ 上具有二阶连续导数，$f(0) = 0$.
 
-\vfill
-\newpage
-\qn{2001.13}
-写出 $f(x)$ 的带拉格朗日余项的一阶麦克劳林公式；
+(1) 写出 $f(x)$ 的带拉格朗日余项的一阶麦克劳林公式；
+
+(2) 证明在 $[-a, a]$ 上至少存在一点 $\eta$，使 $a^3 f''(\eta) = 3\int_{-a}^{a} f(x) \, dx$.
 
 \vfill
 \newpage
-\qn{2001.14}
-证明在 $[-a, a]$ 上至少存在一点 $\eta$，使 $a^3 f''(\eta) = 3\int_{-a}^{a} f(x) \, dx$.
+{\large\bfseries 2001.19}\quad {\small 原卷十一}
+
 已知矩阵 $A = \begin{pmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{pmatrix}$，$B = \begin{pmatrix} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \end{pmatrix}$，且矩阵 $X$ 满足 $AXA + BXB = AXB + BXA + E$，其中 $E$ 是 3 阶单位矩阵，求 $X$.
+
+\vfill
+\newpage
+{\large\bfseries 2001.20}\quad {\small 原卷十二}
+
 已知 $\alpha_1, \alpha_2, \alpha_3, \alpha_4$ 是线性方程组 $Ax = 0$ 的一个基础解系，若 $\beta_1 = \alpha_1 + t\alpha_2$，$\beta_2 = \alpha_2 + t\alpha_3$，$\beta_3 = \alpha_3 + t\alpha_4$，$\beta_4 = \alpha_4 + t\alpha_1$，讨论实数 $t$ 满足什么关系时，$\beta_1, \beta_2, \beta_3, \beta_4$ 也是 $Ax = 0$ 的一个基础解系.
 
 \vfill
-\newpage
 \end{document}
