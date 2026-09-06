@@ -1,97 +1,134 @@
 #!/usr/bin/env python3
-import re, os, sys, subprocess
+from pathlib import Path
+import argparse
+import re
+import shutil
+import subprocess
+import sys
 
-sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-
-HERE = os.path.dirname(os.path.abspath(__file__))   # 脚本所在目录（_习题册）
-SRC = os.path.dirname(HERE)                          # 仓库根目录（含各年 MD）
-OUT = HERE
-os.makedirs(OUT, exist_ok=True)
-XEL = r"C:\texlive\2026\bin\windows\xelatex.exe"
-
-PREAMBLE = r"""\documentclass[UTF8,12pt]{ctexart}
-\usepackage[paperwidth=240mm,paperheight=200mm,margin=14mm,top=8mm]{geometry}
-\usepackage{amsmath,amssymb,mathtools}
-\usepackage{xcolor}
+HERE = Path(__file__).resolve().parent
+XELATEX = shutil.which('xelatex') or r'C:\texlive\2026\bin\windows\xelatex.exe'
+QUESTION = re.compile(r'^(?:###\s*)?(?:\*\*)?\s*(?:[(（](\d+)[)）]|(\d+)[.、．])\s*(?:\*\*)?', re.M)
+PREAMBLE = r'''\documentclass[UTF8,12pt,fontset=windows]{ctexart}
+\usepackage[paperwidth=240mm,paperheight=200mm,left=14mm,right=14mm,top=9mm,bottom=12mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm,graphicx,xcolor}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-\newcommand{\qn}[1]{\textbf{\large #1}\ }
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
 \xeCJKDeclareCharClass{CJK}{"2460 -> "24FF}
+\xeCJKDeclareCharClass{CJK}{"2160 -> "2188}
 \begin{document}
-"""
-POST = r"\end{document}"
+'''
 
-def md_to_latex(s):
-    s = s.replace('&emsp;', '\\qquad')
-    s = re.sub(r'\*\*([^*]*)\*\*', r'\\textbf{\1}', s)
-    s = re.sub(r'<!--.*?-->', '', s, flags=re.S)
-    return s
+def questions_from_text(text):
+    text = re.split(r'^##\s*参考', text, flags=re.M)[0]
+    text = re.sub(r'<!--.*?-->', '', text, flags=re.S)
+    sections = re.split(r'^##\s+', text, flags=re.M)[1:]
+    if not sections:
+        raise ValueError('未找到试卷分节标题')
+    legacy = any(re.match(r'^[一二三四五六七八九十]+、\s*（本题', s) for s in sections)
+    entries = []
+    expected = 1
+    for section in sections:
+        title, _, body = section.partition('\n')
+        if legacy and '选择题' not in title and '填空题' not in title:
+            entries.append((f'原卷{title.split("、")[0]}', body.strip()))
+            continue
+        markers = []
+        next_number = 1 if legacy else expected
+        for match in QUESTION.finditer(body):
+            number = int(match.group(1) or match.group(2))
+            if number == next_number:
+                markers.append(match)
+                next_number += 1
+        if not markers:
+            raise ValueError(f'本节未识别到题目：{title}')
+        for i, match in enumerate(markers):
+            number = int(match.group(1) or match.group(2))
+            end = markers[i+1].start() if i+1 < len(markers) else len(body)
+            label = f'原卷{title.split("、")[0]}（{number}）' if legacy else ''
+            entries.append((label, body[match.end():end].strip()))
+        if not legacy:
+            expected = next_number
+    return entries
 
 def parse_year(path):
-    lines = open(path, encoding='utf-8').read().split('\n')
-    qs = []
-    cur_num = None; cur = []; seen_nn = False; in_ans = False; g = 0
-    for ln in lines:
-        s = ln.strip()
-        if not s:
-            if cur_num is not None: cur.append('')
-            continue
-        if s.startswith('## 参考'):
-            in_ans = True; continue
-        if in_ans or s.startswith('#') or s.startswith('>') or s.startswith('---'):
-            continue
-        if s.startswith('<!--'):
-            continue
-        m_mod = re.match(r'^(\d+)[\.、]\s*(.*)$', s)
-        m_old = re.match(r'^[(（](\d+)[)）]\s*(.*)$', s)
-        start = False; num = None; rest = None
-        if m_mod:
-            seen_nn = True; num = m_mod.group(1); rest = m_mod.group(2); start = True
-        elif m_old and not seen_nn:
-            num = m_old.group(1); rest = m_old.group(2); start = True
-        if start:
-            if cur_num is not None:
-                g += 1; qs.append((g, cur))
-            cur_num = num; cur = [rest]
-            continue
-        if cur_num is not None:
-            cur.append(s)
-    if cur_num is not None:
-        g += 1; qs.append((g, cur))
-    return qs
+    return [(i+1, body.splitlines()) for i, (_, body) in enumerate(questions_from_text(Path(path).read_text(encoding='utf-8-sig')))]
 
-def build_latex(year, qs):
+def inline(text):
+    parts = re.split(r'(\$\$.*?\$\$|\$[^$]*\$)', text, flags=re.S)
+    for i in range(0, len(parts), 2):
+        p = parts[i].replace('&emsp;', r'\hspace{1.5em}')
+        p = re.sub(r'(?<!\\)_{3,}', lambda m: r'\underline{\hspace{20mm}}', p)
+        p = re.sub(r'(?<!\\)([%&#_])', r'\\\1', p)
+        parts[i] = p
+    for i in range(1, len(parts), 2):
+        parts[i] = parts[i].replace('（', '(').replace('）', ')')
+    return re.sub(r'\*\*(.*?)\*\*', r'\\textbf{\1}', ''.join(parts), flags=re.S)
+
+def question_tex(body):
+    body = re.sub(r'^>.*$', '', body, flags=re.M)
+    body = re.sub(r'(?m)^[ \t]*(!\[[^\]]*\]\([^)]+\))[ \t]*$', r'\n\n\1\n\n', body)
+    body = re.sub(r'(?m)^\s*---\s*$', '', body)
+    # Each option and each numbered subquestion begins a paragraph.
+    body = re.sub(r'(?m)^\s*([（(][A-Da-d一二三四ⅠⅡⅢⅰⅱⅲ1-9][)）])', r'\n\1', body)
+    body = re.sub(r'\s*&emsp;\s*(?=[（(][A-Da-d][)）])', '\n\n', body)
+    pieces = []
+    for para in re.split(r'\n\s*\n', body.strip()):
+        para = para.strip()
+        if not para:
+            continue
+        image = re.fullmatch(r'!\[([^\]]*)\]\(([^)]+)\)', para)
+        if image:
+            path = image.group(2).replace('\\', '/')
+            if not path.startswith('_题图/') or '..' in Path(path).parts:
+                raise ValueError('题图必须位于仓库 _题图 目录')
+            size = r'width=.9\textwidth,height=75mm' if '选项' in image.group(1) else r'width=.62\textwidth,height=65mm'
+            pieces.append(r'\begin{center}\includegraphics[' + size + r',keepaspectratio]{' + path + r'}\end{center}')
+        else:
+            pieces.append(inline(para))
+    return '\n\n'.join(pieces)
+
+def build_latex(year, entries):
     body = []
-    for n, content in qs:
-        lines = []
-        for cl in content:
-            t = md_to_latex(cl).strip()
-            if not t: continue
-            if re.match(r'^[(（][A-Da-d][)）]', t):
-                lines.append('\\\\\n\\noindent ' + t)
-            elif re.match(r'^[（(][一二三四ⅠⅡⅢⅰⅱⅲ1-9][)）]', t) or re.match(r'^\([一二三四1-4]\)', t):
-                lines.append('\\\\\n' + t)
-            else:
-                lines.append(t)
-        body.append('\\qn{%s.%d}\n%s\n\n\\vfill\n\\newpage' % (year, n, '\n'.join(lines)))
-    return PREAMBLE + '\n'.join(body) + '\n' + POST
+    for i, (label, content) in enumerate(entries, 1):
+        heading = r'{\large\bfseries ' + str(year) + '.' + str(i) + '}'
+        if label:
+            heading += r'\quad {\small ' + label + '}'
+        body.append(heading + '\n\n' + question_tex(content) + '\n\n\\vfill')
+    return PREAMBLE + '\n\\newpage\n'.join(body) + '\n\\end{document}\n'
 
-def make(year):
-    path = os.path.join(SRC, f"{year}年考研数学二试题.md")
-    if not os.path.exists(path):
-        print(f"{year}: missing source"); return None
-    qs = parse_year(path)
-    tex = build_latex(year, qs)
-    texpath = os.path.join(OUT, f"{year}.tex")
-    open(texpath, 'w', encoding='utf-8').write(tex)
-    r = subprocess.run([XEL, '-interaction=nonstopmode', os.path.basename(texpath)],
-                       cwd=OUT, capture_output=True, text=True, encoding='utf-8', errors='replace')
-    pdf = texpath[:-4] + '.pdf'
-    ok = os.path.exists(pdf)
-    return len(qs), ok
+def make(year, source_dir=None, output_dir=None):
+    source_dir = Path(source_dir) if source_dir else HERE.parent
+    output_dir = Path(output_dir) if output_dir else HERE
+    output_dir.mkdir(parents=True, exist_ok=True)
+    source = source_dir / f'{year}年考研数学二试题.md'
+    entries = questions_from_text(source.read_text(encoding='utf-8-sig'))
+    tex = output_dir / f'{year}.tex'
+    tex.write_text(build_latex(year, entries), encoding='utf-8')
+    # Relative image names are resolved from the repository root.
+    import os
+    env = os.environ.copy()
+    env['TEXINPUTS'] = str(source_dir).replace('\\','/') + '//' + os.pathsep + env.get('TEXINPUTS','')
+    result = subprocess.run([XELATEX, '-no-shell-escape', '-halt-on-error', '-interaction=nonstopmode', tex.name], cwd=output_dir, env=env, capture_output=True, encoding='utf-8', errors='replace')
+    log_path = output_dir / f'{year}.log'
+    log = log_path.read_text(encoding='utf-8',errors='replace') if log_path.exists() else result.stdout
+    errors = re.findall(r'(?:Missing character:|Overfull [^\n]*|! ).*', log)
+    if result.returncode or errors:
+        raise RuntimeError(f'{year} 排版检查失败\n' + '\n'.join(errors) + '\n' + result.stdout[-1800:])
+    match = re.search(r'Output written on .*?\((\d+) pages?', result.stdout)
+    if not match or int(match.group(1)) != len(entries):
+        raise RuntimeError(f'{year} 页数不等于题数，应为 {len(entries)} 页')
+    print(f'{year}: {len(entries)} questions, {len(entries)} pages, OK')
+    return len(entries), True
 
 if __name__ == '__main__':
-    for y in sys.argv[1:]:
-        r = make(y)
-        if r: print(f"{y}: {r[0]} questions -> {'OK' if r[1] else 'FAIL'}")
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('years', nargs='+', type=int)
+    parser.add_argument('--source-dir', type=Path)
+    parser.add_argument('--output-dir', type=Path)
+    args = parser.parse_args()
+    for year in args.years:
+        make(year, args.source_dir, args.output_dir)
